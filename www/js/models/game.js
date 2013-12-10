@@ -144,10 +144,9 @@ define(['backbone', './currentPlayer','../collections/otherPlayers'], function(B
     updateStatus: function(data){
       var player = this.get('otherPlayers').find(function(model){
         return model.get('name') === data.playerName;
-      }
+      });
       player.set(data.powerUpName, data.powerUpValue);
     }
-
   });
   return Game;
 });
